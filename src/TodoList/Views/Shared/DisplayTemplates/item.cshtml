@@ -1,0 +1,15 @@
+﻿@model TodoList.Models.Item
+
+<tr>
+    <td>
+        @Model.Description
+    </td>
+    <td>
+        @Model.Category.Name
+    </td>
+    <td>
+        @Html.ActionLink("edit", "Edit", new { id = Model.ItemId }) |
+        @Html.ActionLink("Details", "Details", new { id = Model.ItemId }) |
+        @Html.ActionLink("Delete", "Delete", new { id = Model.ItemId })
+    </td>
+</tr>

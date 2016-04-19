@@ -1,0 +1,11 @@
+﻿@model TodoList.Models.Item
+
+@{
+    ViewData["Title"] = "To Do List - Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <h2>Edit</h2>
+    <hr />
+    <h4>Edit this task: @Html.DisplayFor(model => model.Description)</h4>
+    @Html.DisplayFor(model => model, "edititem")
+    @Html.ActionLink("Back to List", "Index");

@@ -1,0 +1,13 @@
+﻿@model TodoList.Models.Category
+@{
+    ViewData["Title"] = "Category - Name";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <h2>Item Details</h2>
+    <hr />
+    @Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)
+<br />
+    @Html.DisplayNameFor(model => model.CategoryId): @Html.DisplayFor(model => model.CategoryId)
+<br />
+    @Html.DisplayNameFor(model=>model.Items): @Html.DisplayFor(model=>model.Items.Count)
+    <p>@Html.ActionLink("Edit", "Edit", new { id = Model.CategoryId }) | @Html.ActionLink("Back to list", "Index")</p>

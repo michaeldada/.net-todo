@@ -1,0 +1,26 @@
+﻿@model IEnumerable<TodoList.Models.Item>
+
+@{
+    ViewData["Title"] = "To Do List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>To Do List</h2>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Category.Name)
+        </th>
+    </tr>
+
+    @foreach(var listItem in Model)
+    {
+        @Html.DisplayFor(model => listItem, "ite"m)
+    }
+</table>
+<p>
+        @Html.ActionLink("Create New", "Create")
+        <a href="/">Home</a>
+</p>
